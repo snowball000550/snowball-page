@@ -1,0 +1,41 @@
+<!-- message.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留言板</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		body{
+			background-color: #fff;
+		}
+		.main{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			height: 100vh;
+		}
+		.center{
+			width: 400px;
+			height: 300px;
+			background-color:rgba(250, 150, 181, 0.3);
+			margin: auto auto;
+			border-radius: 10px;
+			box-shadow: 5px 5px 10px rgba(250, 150, 181, .6);;
+		}
+	</style>
+</head>
+<body>
+    <div class="main">
+    	<div class="center">
+    		<form action="">
+    			内容
+    			<textarea name="" id="" cols="30" rows="10"></textarea>
+    			<button>提交</button>
+    		</form>
+    		<div class="list"></div>
+    	</div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/message.js"></script>
