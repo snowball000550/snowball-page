@@ -8,12 +8,27 @@
 	<style type="text/css">
 		body{
 			background-color: #fff;
+			font-family:"Josefin Slab","Myriad pro" ,serif;
 		}
 		.main{
 			display: flex;
 			justify-content: center;
 			width: 100%;
 			height: 100vh;
+			font-family:"Josefin Slab","Myriad pro" ,serif;
+		}
+		.main:before{
+			background: url(images/timg.jpg);
+		    background-size: cover;
+		    content: "";
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    z-index: -1;/*-1 可以当背景*/
+		    -webkit-filter: blur(3px);
+		    filter: blur(5px);
+		    width: 100%;
+		    height: 100%;
 		}
 		.center{
 			width: 400px;
@@ -21,16 +36,61 @@
 			background-color:rgba(250, 150, 181, 0.3);
 			margin: auto auto;
 			border-radius: 10px;
-			box-shadow: 5px 5px 10px rgba(250, 150, 181, .6);;
+			box-shadow: 5px 5px 10px rgba(250, 150, 181, .6);
+			display: flex;
+			flex-direction: column;
+			/*justify-content: center;*/
+		}
+		.title{
+			width: 100%;
+			height: 40px;
+			background-color: #ff7d7d;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+			border-bottom: 2px solid rgba(255,0,0,.4);
+			line-height: 36px;
+			text-align: center;
+			color: #fff;
+			font-size: 26px;
+		}
+		form{
+			display: flex;
+			flex-direction: column;
+			padding: 5px 5px;
+			color: #7f7f7f;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		form>button {
+		    background-color: #fc6363; /* Green */
+		    width: 100px;
+		    height: 40px;
+		    border: none;
+		    color: white;
+		    margin: 5px 0px;
+		    text-align: center;
+		    text-decoration: none;
+		    font-size: 16px;
+		    align-self: center;
+		    border-radius: 5px;
+		}
+		form>input{
+			padding: 4px 0;
+		}
+		form>textarea{
+			padding: 4px 0;			
 		}
 	</style>
 </head>
 <body>
     <div class="main">
     	<div class="center">
+    		<div class="title">留言板</div>
     		<form action="">
-    			内容
-    			<textarea name="" id="" cols="30" rows="10"></textarea>
+    			名字:
+    			<input type="text" placeholder="name">
+    			内容：
+    			<textarea name="" id="" cols="30" rows="10" placeholder="say something..."></textarea>
     			<button>提交</button>
     		</form>
     		<div class="list"></div>
